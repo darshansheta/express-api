@@ -1,3 +1,4 @@
+// this is not needed anymore since we started using sequelize-cli tool
 const config = require('./config/db.config.js');
 const { Sequelize } = require('sequelize');
 

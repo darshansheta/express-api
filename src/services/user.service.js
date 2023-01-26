@@ -1,9 +1,9 @@
 
-const User = require('../models/user.model');
+const { User } = require('../models');
 
 const getAllByPage = async (page = 1, perPage = 15) => {
    
-    const offset = page * perPage;
+    const offset = (page - 1) * perPage;
     const { count, rows } = await User.findAndCountAll({offset: offset, limit: perPage});
     
     const lastPage = Math.ceil(count / perPage);
@@ -17,6 +17,11 @@ const getAllByPage = async (page = 1, perPage = 15) => {
     }
 };
 
+const getUser = async (id) => {
+    return await User.findByPk(id);
+}
+
 module.exports = {
-    getAllByPage
+    getAllByPage,
+    getUser
 }

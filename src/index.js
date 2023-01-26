@@ -5,13 +5,13 @@ const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const { notFound, errorHandler } = require('./middlewares');
 const routes = require('./routes');
-const db = require('./db.js');
+// const db = require('./db.js');
 
-db.authenticate().then(() => {
-    console.log('Database connected...');
-}).catch(err => {
-    console.log('Error: ' + err);
-});
+// db.authenticate().then(() => {
+//     console.log('Database connected...');
+// }).catch(err => {
+//     console.log('Error: ' + err);
+// });
 
 
 const app = express();

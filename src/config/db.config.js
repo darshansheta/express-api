@@ -1,3 +1,4 @@
+// not used anymore since we use sequelize cli to generate files/folders
 module.exports = {
   HOST: process.env.DB_HOST,
   USER: process.env.DB_USERNAME,
